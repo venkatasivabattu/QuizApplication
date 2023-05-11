@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>QuizCorner</title>
+</head>
+<body>
+  <div class="header"><img src="../../assets/logo.png" width="230px" height="120px">
+    <div class="admin"><a routerLink="/adminlogin"><i class="fa fa-cog" aria-hidden="true"></i>Admin</a></div></div>
+  <div class="body">
+    <div class="i1">
+      <img src="../../assets/i1.png" alt="" width="100%" height="250px"/>
+    </div>
+    <div class="i2">
+      
+      <h3>Sign in</h3>
+      <span id="avatar"></span>
+      <div class="form">
+        <form #f="ngForm" (ngSubmit)="login(f.value)">
+
+          <input type="text" name="uname" placeholder="Enter Username"  autocomplete="off" ngModel>
+          <input type="password" name="pw" placeholder="Enter Password"  autocomplete="off" ngModel>
+          <button type="submit"  id="submit">Sign in</button>
+        </form>
+      </div>
+      <span>Don't you have Account? <a routerLink="/register">Sign Up</a></span>
+    </div>
+    <div class="i3"></div>
+  </div>
+</body>
+</html>
+
+<router-outlet></router-outlet>
