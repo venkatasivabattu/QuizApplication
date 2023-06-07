@@ -1,0 +1,114 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    
+    margin-top: 95px;
+    height: 82.5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+.i1,.i2,.i3{
+    height: 100%;
+    margin: 2px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.i1,.i3{
+    width: 30%;
+    overflow: hidden;
+}
+.i2{
+    width: 40%;
+}
+.i2 .item{
+    width: 80%;
+    height: fit-content;
+    box-shadow: 0 0 10px rgba(0,0,0,0.9);
+  -moz-box-shadow: 0 0 10px rgba(0,0,0,0.9);
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.9);
+  -o-box-shadow: 0 0 10px rgba(0,0,0,0.9);;
+  border-radius: 8px;
+  background-color: rgb(8, 106, 205);;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.i2 .item .head{
+    width: 98%;
+    height: fit-content;
+    background-color: white;
+    text-align: center;
+    border-radius: 8px;
+    margin: 5px;
+}
+.i2 .item .info{
+    width: 98%;
+    height: 85%;
+    background-color: white;
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.i2 .item .info .divs,.bdivs{
+    width: 100%;
+    padding: 3px;
+    
+    margin: 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.i2 .item .info .divs .k{
+    width: 50%;
+    
+    margin: 1px;
+    text-align: right;
+    overflow-x: hidden;
+}
+.i2 .item .info .divs .v{
+    width: 50%;
+    overflow-x: hidden;
+    
+    margin: 1px;
+    text-align: left;
+}
+.i2 .item .info .bdivs{
+    padding: 5px;
+}
+.i2 .item .info .bdivs button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin: 3px 5px;
+    padding: 4px 7px;
+    border-radius: 8px;
+    color: #fff;
+}
+.i2 .item .info .bdivs button:hover{
+    box-shadow: 2px 2px 3px black;
+}
+.i2 .item .info .bdivs button:first-child{
+    background-color: red;
+}
+.i2 .item .info .bdivs button:nth-child(2){
+    background-color: green;
+    padding: 4px 15px;
+}

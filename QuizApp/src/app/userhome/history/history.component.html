@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="body">
+        <h3>Here is Your History !!</h3>
+        <div class="item">
+            <table>
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Subject Name</th>
+                        <th>Quiz Name</th>
+                        <th>Marks</th>
+                        <th>Status</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let i of h">
+                        <td>{{h.indexOf(i)+1}}</td>
+                        <td>{{i['sname']}}</td>
+                        <td>{{i['qname']}}</td>
+                        <td>{{i['marks']}}</td>
+                        <td *ngIf="i['status']=='Pass'" style="color:green"> <i class="fa fa-check" aria-hidden="true"></i></td>
+                        <td *ngIf="i['status']=='Fail'" style="color:red"> <i class="fa fa-times" aria-hidden="true"></i></td>
+                        <td>{{ i['date'] | date: 'hh:mm a' }}, {{ i['date'] | date: "d  MMMM yyyy" }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+<router-outlet></router-outlet>

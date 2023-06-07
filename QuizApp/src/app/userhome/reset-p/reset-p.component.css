@@ -1,0 +1,127 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    padding: 1px;
+    margin-top: 90px;
+    height: 83vh;
+    width: 100%;;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    height: 90%;
+    
+    width: 100%;
+    
+
+}
+.i1,.i2,.i3{
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    margin: 5px;
+}
+.i1{
+    display: flex;
+    justify-content: center;;
+    align-items: center;
+    background-color: inherit;
+}
+.i3{
+    background-image: url("../../../assets/img.gif");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: inherit;
+}
+.i2{
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.9);
+  -moz-box-shadow: 0 0 10px rgba(0,0,0,0.9);
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.9);
+  -o-box-shadow: 0 0 10px rgba(0,0,0,0.9);;
+  height: 250px;
+  padding: 10px 15px;
+  padding-bottom: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.i2 h3{
+    background-color:rgb(8, 106, 205) ;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    padding: 5px ;
+    margin-bottom: 10px;
+
+}
+
+.i2 .form{
+   
+    margin: 3px 0px;
+    width: 100%;
+    height: 70%;
+    
+    padding: 10px 5px;
+    padding-top: 20px;
+    margin-bottom: -2px;
+    
+    
+}
+.i2 .form form{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;;
+    margin-bottom: 0px;
+}
+.i2 .form form input{
+    width: 90%;
+    height: 30px;
+    margin: 0px 3px 9px 3px;
+    border-radius: 3px;
+    border:1px solid black;
+    padding: 2px 4px;
+}
+.i2 .form form input:focus{
+    border:2px solid rgb(8, 106, 205) ;
+    outline: none;
+}
+.i2 .form form #submit{
+    width: fit-content;
+    height: 25px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    padding: 3px 5px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color:rgb(8, 106, 205) ;
+    color: #fff;
+}
+.i2 .form form #submit:hover{
+    background-color:green;
+    box-shadow: 2px 2px 3px black;
+}
+
+
+

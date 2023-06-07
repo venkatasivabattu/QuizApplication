@@ -1,0 +1,115 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    padding: 0px;
+    padding-top: 50px;
+    margin-top: 90px;
+    height: 83.2vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    background-image: url('../../../assets/history/engineering_icons_312917.webp');
+    background-position: center;
+    background-size: contain;
+   
+}
+.body{
+    width: 70%;
+    height: 99%;
+    background-color: #fff;
+    padding: 25px;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.body h3{
+    width: 100%;
+    color: #fff;
+    background-color: rgb(8, 106, 205) ;;;
+    padding: 4px;
+    text-align: center;
+
+}
+.body .item{
+    width: 95%;
+    height: 90%;
+    margin-top: 20px;
+    
+    overflow-y: scroll;
+    
+}
+.body .item table ,tr{
+  width: 100%;
+  border: 1px solid  rgb(8, 106, 205) ;;;
+  border-collapse: collapse;
+  
+}
+.body .item table th,td{
+  padding: 4px;
+  
+}
+.body .item table th{
+  border-right: 1px solid #fff;
+}
+table thead{
+  background-color:  rgb(8, 106, 205) ;;;
+  color: #fff;
+}
+.body .item table tr:first td{
+  border: 2px solid #fff;
+}
+.body .item table tr td{
+  
+  text-align: center;
+  background-color: #fff;
+  padding: 12px 8px;
+}
+.body .item table tr td:first-child{
+  text-align: left;
+}
+.body .item table tr:nth-child(even) td{
+  background-color: rgb(199, 226, 252) ;;;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #fff;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ffffffbd;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #fff;
+  }

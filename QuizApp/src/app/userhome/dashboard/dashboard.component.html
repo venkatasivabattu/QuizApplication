@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizCorner</title>
+</head>
+<body>
+    <div class="i1">
+        <h3>Available Subjects</h3>
+        <div class="subjects">
+            <div class="item" *ngFor="let s of subjects">
+                <p>
+                    <i class="fa fa-flask fa-3x" aria-hidden="true" *ngIf="s['feild']=='g';else else1"></i> 
+                    <ng-template #else1>
+                        <i class="fa fa-desktop fa-3x" aria-hidden="true" *ngIf="s['feild']=='c';else else2"></i>
+                        <ng-template #else2>
+                            <i class="fa fa-superscript fa-3x" aria-hidden="true"></i>
+                        </ng-template>
+                    </ng-template>
+                    {{s['sname']}}</p>
+                    <button><a routerLink="viewquizes" [queryParams]="{ sid: s['sid'] }"><i class="fa fa-eye" aria-hidden="true"></i> View Quizes</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="i2">
+        <div class="profile">
+
+            <img src="../../../assets/uhome/female.png" *ngIf="user['gender']=='female'" width="170px" height="170px">
+            <img src="../../../assets/uhome/male.png" *ngIf="user['gender']=='male'" width="200px" height="200px">
+            <img src="../../../assets/uhome/others.png" *ngIf="user['gender']=='' "  width="200px" height="200px">
+            <img src="../../../assets/uhome/others.png" *ngIf="user['gender']=='others'"  width="190px" height="185px">
+            <p id="u">{{user['uname']}}</p>
+            <div class="ps">
+                <p *ngIf="user['name'].length>1;else n"><i class="fa fa-user" aria-hidden="true" ></i> {{user['name']}}</p>
+                <ng-template #n>
+                    <p><i class="fa fa-user" aria-hidden="true" ></i> -----</p>
+                </ng-template>
+                <p *ngIf="user['email'].length>1;else e"><i class="fa fa-envelope" aria-hidden="true" ></i> {{user['email']}}</p>
+                <ng-template #e>
+                    <p><i class="fa fa-envelope" aria-hidden="true" ></i> -----</p>
+                </ng-template>
+                <p *ngIf="user['mobile'].length>2;else m"><i class="fa fa-phone" aria-hidden="true" ></i> {{user['mobile']}}</p>
+                <ng-template #m>
+                    <p><i class="fa fa-phone" aria-hidden="true" ></i> -----</p>
+                </ng-template>
+            </div>
+        </div>
+        <div class="buttons">
+            <button><a routerLink="../uhome/analysis">View Your Progress <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></button>
+        </div>
+    </div>
+</body>
+</html>
+<router-outlet></router-outlet>

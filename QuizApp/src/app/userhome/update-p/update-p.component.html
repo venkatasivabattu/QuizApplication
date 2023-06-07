@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="body">
+        <div class="i"></div>
+        <div class="form">
+            <h3>Update Profile</h3>
+            <div class="formdiv">
+                <form [formGroup]="fdata" (ngSubmit)="update(fdata.value)">
+                    <div class="item" style="display:none">
+                        <div class="label">
+                          <label><i class="fa fa-user" aria-hidden="true"></i> </label>
+                        </div>
+                        <div class="input">
+                          <input type="text" name="name" placeholder="Enter Full name" formControlName="name">
+                        </div>
+                      </div>
+  
+                    <div class="item">
+                        <div class="label">
+                          <label><i class="fa fa-user" aria-hidden="true"></i> </label>
+                        </div>
+                        <div class="input">
+                          <input type="text" name="name" placeholder="Enter Full name" formControlName="name">
+                        </div>
+                      </div>
+  
+                    <div class="item">
+                      <div class="label">
+                        <label><i class="fa fa-calendar" aria-hidden="true"></i></label>
+                      </div>
+                      <div class="input">
+                        <input type="date" name="dob" formControlName="dob">
+                      </div>
+                        
+                    </div>
+                    <div class="item">
+                      <div class="label">
+                        <label><i class="fa fa-venus-mars" aria-hidden="true"></i></label>
+                      </div>
+                      <div class="input" id="gender" >
+                        <input type="radio" name="gender" value="male" formControlName="gender">Male
+                      <input type="radio" name="gender" value="female" formControlName="gender">Female
+                      <input type="radio" name="gender" value="others" formControlName="gender">Others
+                      </div>
+                      
+                  </div>
+                  <div class="item">
+                    <div class="label">
+                      <label><i class="fa fa-graduation-cap" aria-hidden="true"></i></label>
+                    </div>
+                    <div class="input">
+                      <select name="edu" formControlName="education">
+                        <option value='' selected>Education</option>
+                        <option value="pg">Post Graduation</option>
+                        <option value="ug">Under Gradutions</option>
+                        <option value="inter/diploma">Inter/Diploma</option>
+                        <option value="ssc">SSC</option>
+                      </select>
+                    </div>
+                    
+                  </div>
+                  <div class="item">
+                    <div class="label">
+                      <label><i class="fa fa-address-card" aria-hidden="true"></i></label>
+                    </div>
+                    <div class="input">
+                      <input type="text" name="address" placeholder="Enter Address" formControlName="address">
+                    </div>
+                    
+                </div>
+                  <div class="item">
+                    <div class="label"><label><i class="fa fa-phone" aria-hidden="true"></i></label></div>
+                    <div class="input">
+                      <input type="tel" name="mobile" placeholder="Enter Mobile number"  formControlName="mobile">
+                    </div>
+                    
+                  </div>
+                  <div class="item">
+                    <div class="label">
+                      <label><i class="fa fa-envelope" aria-hidden="true"></i></label>
+                    </div>
+                    <div class="input">
+                      <input type="email" name="email" placeholder="Enter Email Address" formControlName="email">
+                    </div>
+                    
+                  </div>
+                  <div class="item">
+                    <div class="label">
+                      <label><i class="fa fa-user" aria-hidden="true"></i></label>
+                    </div>
+                    <div class="input">
+                      <input type="text" name="uname" placeholder="Enter User name" formControlName="uname">
+                    </div>
+                    
+                  </div>
+                  
+                  <div class="submit">
+                    <input type="submit" value="Update">
+                  </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
+
+<router-outlet></router-outlet>

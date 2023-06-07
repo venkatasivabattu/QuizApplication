@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
         (res)=>{
           console.log(res);
           if(res.valid==true){
-            sessionStorage.setItem('uname',JSON.stringify(u));
+            sessionStorage.setItem('uname',u);
             this.r.navigate(['/uhome']);
           }
           else{

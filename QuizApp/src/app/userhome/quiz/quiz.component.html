@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="alert" id="alert">
+        <p>No.of Questions Answered::{{submit}}</p>
+        <p>No.of Questions to be Answered::{{session_data['q']-submit}}</p>
+        <p id="red"><b>Are You Sure Want To Submit??</b></p>
+        <div class="buttons">
+            <button (click)="cancel()">cancel</button>
+            <button (click)="marksCounter()">Submit</button>
+        </div>
+    </div>
+    <div class="i1">
+        <img src="../../../assets/quiz/b.png" width="250px" height="250px">    
+    </div>
+    <div class="item">
+        <div class="head">
+            <p>{{session_data['sname']}} :: {{session_data['qname']}}</p>
+        </div>
+        <div class="body">
+            <div *ngIf="questions">
+            <form #f="ngForm" (ngSubmit)="cal(f.value)">
+                <div class="q" *ngFor="let quest of questions">
+                    
+                        <span><pre>Q{{questions.indexOf(quest)+1}}.{{quest[0]['question']}}</pre></span>
+                    
+                    <div class='o' *ngFor="let o of options[quest[0]['qsid']]">
+                    <input type="radio" name="{{quest[0]['qsid']}}" value="{{o['option']}}" ngModel> <p>{{o['option']}}</p>
+                    </div>
+             </div>
+             <input type="submit" value="Submit Quiz" id="submit">
+            </form>
+        </div>
+        </div>
+    </div>
+    <div class="i2">
+        <img src="../../../assets/quiz/g.png" width="230px" height="230px">
+    </div>
+</body>
+</html>
+<router-outlet></router-outlet>

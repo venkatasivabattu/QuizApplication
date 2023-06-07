@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizCorner</title>
+</head>
+<body>
+    <div class="i1">
+        <img src="../../../assets/viewquizes/img1.webp" width="400px">
+    </div>
+    <div class="i2">
+        <h3> <i class="fa fa-flask " aria-hidden="true" *ngIf="subject['feild']=='g';else else1"></i> 
+            <ng-template #else1>
+                <i class="fa fa-desktop " aria-hidden="true" *ngIf="subject['feild']=='c';else else2"></i>
+                <ng-template #else2>
+                    <i class="fa fa-superscript " aria-hidden="true"></i>
+                </ng-template>
+            </ng-template> {{subject['sname']}}</h3>
+            
+            <div class="quizes" *ngIf="quizes.length">
+                <div *ngFor="let q of quizes" class="item">
+
+                    <p>{{q['qname']}}</p>
+                    <button ><a routerLink="../start-quiz" [queryParams]="{ qid: q['qid'] }" *ngIf="q['status']==0">Take Quiz</a>
+                        <a routerLink="../start-quiz" [queryParams]="{ qid: q['qid'] }" *ngIf="q['status']==1">Retake Quiz</a></button>
+                </div>
+            </div>
+            <div class="noquizes" *ngIf="!quizes.length">
+                <img src="../../../assets/viewquizes/noq.jpg">
+                <p>No Quizes Found!</p>
+            </div>
+            
+    </div>
+    <div class="i3">
+        <img src="../../../assets/viewquizes/img2.jpg" width="370px">
+    </div>
+</body>
+</html>
+<router-outlet></router-outlet>

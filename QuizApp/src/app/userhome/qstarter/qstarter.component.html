@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+<div class="i1">
+    <img src="../../../assets/starter/i1.gif" width="360px" height="400px">
+</div>
+<div class="i2">
+    <div class="item">
+        <div class="head">
+            <img src="../../../assets/starter/head.png" height="31px">
+        </div>
+        <div class="info">
+            <div class="divs">
+                <div class="k">Subject Name</div>
+                <div class="v">: {{subject[0]['sname']}}</div>
+            </div>
+            <div class="divs">
+                <div class="k">Quiz Name</div>
+                <div class="v">: {{quiz[0]['qname']}}</div>
+            </div>
+            <div class="divs">
+                <div class="k">No.of Questions</div>
+                <div class="v">: {{quiz[0]['questions']}}</div>
+            </div>
+            <div class="divs">
+                <div class="k">No.of Marks</div>
+                <div class="v">: {{quiz[0]['questions']}}</div>
+            </div>
+            <div class="divs">
+                <div class="k">Pass Limit</div>
+                <div class="v">: {{quiz[0]['passlimit']}}</div>
+            </div>
+            <div class="bdivs">
+                <button (click)="cancel()">Cancel</button>
+                <button (click)="launchQuiz(qid)">Start Quiz</button>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<div class="i3">
+    <img src="../../../assets/starter/i3.avif" width="360px" height="400px">
+</div>
+    
+</body>
+</html>
+<router-outlet></router-outlet>

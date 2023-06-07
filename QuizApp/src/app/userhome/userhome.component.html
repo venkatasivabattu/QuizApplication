@@ -1,1 +1,51 @@
-<p>userhome works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>QuizApp</title>
+
+    
+</head>
+<body>
+    <div class="header">
+        <img src="../../assets/logo.png" width="230px" height="120px" routerLink="">
+        <div class="navbar">
+            
+            <div class="items">
+                <ul>
+                    <li><i class="fa fa-flask" aria-hidden="true"></i> Take Quiz 
+                        <div class="sublist" id="sublist">
+                            <ul>
+                                <li *ngFor="let l of subjects">
+                                  <button (click)="viewquizes(l['sid'])" >{{ l['sname'] }}</button>
+                                </li>
+                              </ul>
+                        </div></li>
+                    <li><i class="fa fa-list-ul" aria-hidden="true"></i> Status
+                        <div class="sublist" id="sublist2">
+                            <ul>
+                                <li><button (click)='history()'>Quiz History</button></li>
+                                <li><button (click)='analysis()'>Quiz Analysis</button></li>
+                    
+                            </ul>
+                        </div></li>
+                    <li><i class="fa fa-user" aria-hidden="true"></i> Profile
+                        <div class="sublist" id="sublist3">
+                            <ul>
+                                <li><button (click)='update()'>Update Profile</button></li>
+                                <li><button (click)='reset()'>Reset Password</button></li>
+                                <li><button (click)="logout()">Log Out</button></li>
+                            </ul>
+                        </div></li>
+                    <li><button (click)="logout()"><i class="fa fa-external-link-square" aria-hidden="true"></i><i class="fa fa-stop-circle" aria-hidden="true"></i> Log Out</button></li>
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div> 
+</body>
+</html>
+<router-outlet></router-outlet>

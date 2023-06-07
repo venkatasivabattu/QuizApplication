@@ -1,0 +1,218 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    
+    margin-top: 95px;
+    height: 82.5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.i1,.i2{
+    height: 98%;
+    margin: 5px;
+    
+}
+.i1{
+  
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    padding: 5px;
+}
+.i2{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.i1 .subjects{
+    width: 95%;
+    min-height: fit-content;
+    max-height: 450px;
+    background-color: #fff;
+    margin-top: 10px;
+    border-radius: 8px;
+    padding: 9px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.9);
+  -moz-box-shadow: 0 0 10px rgba(0,0,0,0.9);
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.9);
+  -o-box-shadow: 0 0 10px rgba(0,0,0,0.9);;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+}
+.i1 h3{
+    background-color: rgb(8, 106, 205) ;
+    padding: 5px;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+.i1 .subjects .item{
+    margin: 10px;
+    background-color: #54535310;
+    width: 97%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid rgb(8, 106, 205);
+    color: rgb(8, 106, 205);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+  }
+  .item p{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: large;
+    overflow-x: scroll;
+  }
+  .item p i{
+    padding: 8px;
+    margin: 3px;
+    margin-right: 10px;
+    
+  }
+  .i1 .subjects .item:hover{
+    background-color:#fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.9);
+  -moz-box-shadow: 0 0 10px rgba(0,0,0,0.9);
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.9);
+  -o-box-shadow: 0 0 10px rgba(0,0,0,0.9);;
+    
+  }
+  .i1 .subjects .item button{
+    float: right;
+    margin-left: 12%;
+    width: fit-content;
+    padding: 7px 8px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    background-color: rgb(8, 106, 205);
+    color: #fff;
+    display: none;
+  }
+  .i1 .subjects .item button a{
+    color: #ffff;
+    text-decoration: none;
+  }
+  .i1 .subjects .item button:hover{
+    background-color: rgba(8, 107, 205, 0.89);
+    box-shadow: 2px 2px 3px black;
+  }
+  .i1 .subjects .item button a:hover{
+    text-decoration: underline;
+  }
+  .i1 .subjects .item:hover button{
+    display: block;
+  }
+  .profile,.buttons{
+    width: 90%;
+    margin: 3px;
+    
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.profile{
+    height: 70%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.9);
+  -moz-box-shadow: 0 0 10px rgba(0,0,0,0.9);
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.9);
+  -o-box-shadow: 0 0 10px rgba(0,0,0,0.9);;
+  
+  
+}
+.buttons{
+    height: 20%;
+}
+
+.i2 .profile .ps{
+  
+  padding: 3px;
+  margin: 2px;
+  text-align: left;
+  
+}
+.i2 .profile .ps p{
+  margin: 3px;
+  color: rgb(8, 106, 205);
+  font-size:large;
+}
+.i2 .profile #u{
+  background-color: rgb(8, 106, 205);
+  color: #fff;
+  width: fit-content;
+  max-width: inherit;
+  padding: 3px 15px;
+  border-radius: 8px;
+}
+.i2 .buttons button{
+  float: right;
+  margin-left: 12%;
+  width: fit-content;
+  padding: 7px 8px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  background-color: rgb(8, 106, 205);
+  color: #fff;
+ 
+}
+.i2 .buttons button a{
+  color: #ffff;
+  text-decoration: none;
+}
+.i2 .buttons button:hover{
+  background-color: rgba(8, 107, 205, 0.89);
+  box-shadow: 2px 2px 3px black;
+}
+.i2 .buttons button a:hover{
+  text-decoration: underline;
+}
+
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ffffffbd;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #fff;
+  }

@@ -1,1 +1,130 @@
-<p>register works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>QuizCorner</title>
+</head>
+<body>
+  <div class="header">
+    <img src="../../assets/logo.png" width="230px" height="120px">
+    <div class="admin">
+        <a routerLink="/adminlogin"><i class="fa fa-cog" aria-hidden="true"></i>Admin</a>
+    </div>
+  </div>
+  <div class="body">
+    <div class="i"></div>
+    <div class="form">
+        <h3>Sign Up</h3>
+        <div class="formdiv">
+            <form #f="ngForm" (ngSubmit)="register(f.value)">
+                <div class="item">
+                  <div class="label">
+                    <label><i class="fa fa-user" aria-hidden="true"></i> </label>
+                  </div>
+                  <div class="input">
+                    <input type="text" name="name" placeholder="Enter Full name" ngModel>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="label">
+                    <label><i class="fa fa-calendar" aria-hidden="true"></i></label>
+                  </div>
+                  <div class="input">
+                    <input type="date" name="dob" ngModel>
+                  </div>
+                    
+                </div>
+                <div class="item">
+                  <div class="label">
+                    <label><i class="fa fa-venus-mars" aria-hidden="true"></i></label>
+                  </div>
+                  <div class="input" id="gender">
+                    <input type="radio" name="gender" value="male" ngModel>Male
+                  <input type="radio" name="gender" value="female" ngModel>Female
+                  <input type="radio" name="gender" value="others" ngModel>Others
+                  </div>
+                  
+              </div>
+              <div class="item">
+                <div class="label">
+                  <label><i class="fa fa-graduation-cap" aria-hidden="true"></i></label>
+                </div>
+                <div class="input">
+                  <select name="edu" ngModel>
+                    <option value='' selected>Education</option>
+                    <option value="pg">Post Graduation</option>
+                    <option value="ug">Under Gradutions</option>
+                    <option value="inter/diploma">Inter/Diploma</option>
+                    <option value="ssc">SSC</option>
+                  </select>
+                </div>
+                
+              </div>
+              <div class="item">
+                <div class="label">
+                  <label><i class="fa fa-address-card" aria-hidden="true"></i></label>
+                </div>
+                <div class="input">
+                  <input type="text" name="address" placeholder="Enter Address" ngModel>
+                </div>
+                
+            </div>
+              <div class="item">
+                <div class="label"><label><i class="fa fa-phone" aria-hidden="true"></i></label></div>
+                <div class="input">
+                  <input type="tel" name="mobile" placeholder="Enter Mobile number"  ngModel>
+                </div>
+                
+              </div>
+              <div class="item">
+                <div class="label">
+                  <label><i class="fa fa-envelope" aria-hidden="true"></i></label>
+                </div>
+                <div class="input">
+                  <input type="email" name="email" placeholder="Enter Email Address" ngModel>
+                </div>
+                
+              </div>
+              <div class="item">
+                <div class="label">
+                  <label><i class="fa fa-user" aria-hidden="true"></i></label>
+                </div>
+                <div class="input">
+                  <input type="text" name="uname" placeholder="Enter User name" ngModel>
+                </div>
+                
+              </div>
+              <div class="item">
+                <div class="label">
+                  <label><i class="fa fa-lock" aria-hidden="true"></i></label>
+                </div>
+                <div class="input">
+                  <input type="password" name="pw" placeholder="Enter Password" ngModel>
+                </div>
+                
+              </div>
+              <div class="item">
+                <div class="label">
+                  <label><i class="fa fa-unlock-alt" aria-hidden="true"></i></label>
+                </div>
+                <div class="input">
+                  <input type="password" name="cpw" placeholder="Re-enter Password"  ngModel>
+                </div>
+                
+              </div>
+              <div class="submit">
+                <input type="submit" value="Register">
+              </div>
+            </form>
+        </div>
+        
+        <div class="note"><span>Already Have an Account?  <a routerLink="../"> Sign in</a></span></div>
+    </div>
+  </div>
+</body>
+</html>
+<router-outlet></router-outlet>
