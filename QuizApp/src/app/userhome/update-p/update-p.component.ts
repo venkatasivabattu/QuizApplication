@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/services/login.service';
 import { UhomeService } from 'src/services/uhome.service';
 import { FormControl,FormGroup } from '@angular/forms';
-import { chownSync } from 'fs';
+
 import { Router } from '@angular/router';
 
 @Component({
